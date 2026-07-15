@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Birthday Wish! 🎈</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <audio id="bg-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
+    <button id="music-btn" class="fab-btn hidden">🎵 Play Music</button>
+
+    <div class="container">
+        
+        <div id="setup-section" class="card">
+            <h2>✨ Setup Your Birthday Page ✨</h2>
+            <p class="subtitle">Fill out the details below to customize the page.</p>
+            
+            <div class="form-group">
+                <label for="input-name">Birthday Person's Name:</label>
+                <input type="text" id="input-name" placeholder="e.g., Sarah">
+            </div>
+            
+            <div class="form-group">
+                <label for="input-wish">Your Special Wish:</label>
+                <textarea id="input-wish" rows="4" placeholder="May your year be filled with lots of laughter, success, and delicious cake!..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="input-sender">From Who?</label>
+                <input type="text" id="input-sender" placeholder="e.g., Your Best Friend Alex">
+            </div>
+            
+            <button id="generate-btn" class="btn">Generate Birthday Page 🚀</button>
+        </div>
+
+        <div id="gift-section" class="card hidden">
+            <h2>Hey <span class="dynamic-name">Friend</span>, you have a surprise package! 🎁</h2>
+            <p>Click the box to open your birthday surprise.</p>
+            <div class="gift-container" id="gift-box">
+                <div class="gift-lid"></div>
+                <div class="gift-box-body"></div>
+            </div>
+        </div>
+
+        <div id="wish-section" class="card hidden fade-in">
+            <h1 class="sparkle-text">✨ Happy Birthday, <span id="display-name">Name</span>! ✨</h1>
+            
+            <div class="cake-icon">🎂</div>
+            
+            <p class="wish-message" id="display-wish">
+                Wish goes here...
+            </p>
+            
+            <div class="signature">
+                With love from,<br>
+                <strong id="display-sender">Sender Name</strong> ❤️
+            </div>
+            
+            <button id="celebrate-btn" class="btn">Blast More Confetti! 🎊</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>.
